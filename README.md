@@ -1,6 +1,9 @@
 # Week 2 Assignment (Marvel Heroes) [tr]
  > Bu projede 12 marvel kahramanı listelendi. Proje tüm Marvel kahramanları listelenecek şekilde geliştirilecek.
 
+# Click, Click :)
+[Marvel Heroes](https://patika-react-bootcamp-week2.vercel.app/)
+
 ## Projeyi kullanabilmeniz için gerekenler
 
 - [Visual Studio Code](https://code.visualstudio.com/download)
