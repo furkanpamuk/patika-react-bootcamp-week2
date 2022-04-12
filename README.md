@@ -14,9 +14,9 @@
 1. Bir dosya oluşturulur.
 2. Üzerine sağ tıklanıp terminal açılır.
 3. Aşağıdaki metin terminale yazılarak proje kopyalanır.
-`git clone https://github.com/patika-175-protein-react-bootcamp/week2-html-css-assignment-furkanpamuk.git` 
+`git clone https://github.com/furkanpamuk/patika-react-bootcamp-week2.git` 
 4. Aşağıdaki metin terminale yazılarak proje dosyasına erişilir.
-`cd week2-html-css-assignment-furkanpamuk `
+`cd patika-react-bootcamp-week2 `
 5. Aşağıdaki metin terminale yazılarak Visual Studio Code ile proje açılır.  
 `code .`
     
@@ -37,9 +37,9 @@
 1. A file is created.
 2. Right click on it and the terminal opens.
 3. The project is copied by typing the following text into the terminal.
-    `git clone https://github.com/patika-175-protein-react-bootcamp/week2-html-css-assignment-furkanpamuk.git`
+    `git clone https://github.com/furkanpamuk/patika-react-bootcamp-week2.git`
 4. The following text is typed into the terminal to access the project file.
-`cd week2-html-css-assignment-furkanpamuk `
+`cd patika-react-bootcamp-week2 `
 5. The project is opened with Visual Studio Code by typing the following text into the terminal.
     `code .`
 
