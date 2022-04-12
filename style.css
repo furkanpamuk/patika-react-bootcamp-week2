@@ -1,0 +1,180 @@
+/* default gelen bazı değerler sıfırlandı ve font-family değiştirildi */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* sayfanın rengi seçildi */
+body{
+    background: #222 ;
+}
+/* scrollbar stillendirildi */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background-color: #222;
+
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #f00;
+    border-radius: 2px;
+  }
+/* container class'ı zoom out yapıldığında içeriklerin ortalanması için oluşturuldu */
+.container {
+    width: 1520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header desktop görünümünde 100px yukarıya çekildi ve Marvel resminin hizalanması için position kullanıldı
+*/
+header{
+    position: relative; 
+    margin-top: -80px !important;
+}
+/* Marvel resmi birinci resmin üzerine yerleştirildi */
+header :last-child {
+    position: absolute;
+    bottom : -10px;
+}
+/*  main bölümü ile header bölümü arası açıldı */
+main {
+    margin-top:200px !important;  
+}
+/* kahramanların olduğu çerçeveler flexbox ile hizalandı */
+.heroesBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* Çerçeve stillendirildi ve hover etkilerinin geçişi için transition yazıldı */
+.frame {
+    margin:40px 30px;
+    width: 252px;
+    height: 369px ;
+    border : 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    transition: border-color 1s;
+    cursor: pointer;
+}
+/* kahraman fotoğrafları çerçevenin 20 px üstüne çıkarıldı */
+.heroImg {
+    position: absolute;
+    top: -20px;
+    transition: all 1s;
+}
+/* kahraman fotoğraflarının üstüne çizgi yerleştirildi  */
+.frame::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    width: 216px;
+    height: 2px;
+    background-color: #fff;
+    transition: opacity 0.5s;  
+}
+/* kahraman isimleri konumlandırıldı */
+.heroName {
+    position: absolute;
+    color: #fff;
+    bottom: 15px;
+}
+/* çerçevelerin üzerine gelindiğinde bu stillendirmeler yapıldı */
+.frame:hover .heroImg {
+    transform: translateY(20px); 
+    width: 100%;
+    height: 100%;
+}
+.frame:hover:before {
+    opacity: 0;
+}
+.frame:hover {
+    border-color: #222;
+}
+
+
+/* pagesBox'ın içindeki ul flexbox ile ortalandı */
+.pagesBox {
+    margin-bottom: 40px;
+}
+/*  sayfa numaraları kutunun sonuna hizalandı */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    color: #A9A9A9;
+    list-style: none;
+    width: 90%;
+    padding-right: 60px;
+}
+/*  sayfa numaraları stillendirildi */
+.pageNumber {
+    margin:0 10px;
+    width: 50px;
+    padding:3px 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+/*  sayfa numaralarının üzerine gelindiğinde kutucuk oluşturuldu */
+.pageNumber:hover {
+    background-color: #A9A9A9;
+    color: #fff;
+}
+
+/* sahip olduğum laptop un genişliğinden küçük olan ekran boyutlarında  */
+@media (max-width : 1520px) {
+    .container {
+        width: 100%;
+    }
+}
+/* ipad air ve daha küçük ekran genişliklerinde yapılan stillendirmeler  */
+@media (max-width : 820px) {
+    header {
+        margin-top: 0 !important;
+    }
+    main {
+        margin-top: 80px !important; 
+    }
+    .frame {
+        width: 189px;
+        height: 277px;
+    }
+    .heroImg,
+    .frame::before {
+        width: 90%;
+    }
+    .pagination {
+        width: 100%;
+        padding-right: 0px;
+        justify-content: center;
+    }
+    .pageNumber {
+        margin: 0 ;
+    }
+    
+}
+/* iphone xr ve daha küçük ekran genişliklerinde yapılan stillendirmeler  */
+
+@media (max-width : 414px) {
+      .frame {
+          width: 168px;
+          height: 240px;
+      }
+      .heroImg,
+      .frame::before {
+          width: 80%;
+      }
+}
